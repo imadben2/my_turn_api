@@ -14,9 +14,9 @@
 
 
     <li class="side-nav-item">
-        <a href="" class="side-nav-link">
+        <a href="{{route('doctors.index')}}" class="side-nav-link">
             <i class="uil-capsule"></i>
-            <span>  Les Matières  </span>
+            <span> Les Médecines </span>
         </a>
     </li>
 

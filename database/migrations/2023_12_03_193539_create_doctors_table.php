@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('medecins', function (Blueprint $table) {
+        Schema::create('doctors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('specialty');
@@ -24,10 +24,11 @@ return new class extends Migration
             $table->string('phone_number'); // Phone number
             $table->string('wilaya')->nullable();; // Province/Region
             $table->string('commune')->nullable();; // Municipality
-            $table->string('localisation')->nullable();; // Location
+            $table->string('Location')->nullable();; // Location
             $table->string('sexe')->nullable();; // sexe
             $table->text('about')->nullable();; // About
-            $table->string('disponibilité')->nullable();; // Availability
+            $table->string('availability_start')->nullable();; // Availability
+            $table->string('availability_end')->nullable();; // Availability
             $table->rememberToken();
             $table->timestamps();
         });
@@ -38,6 +39,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('medecins');
+        Schema::dropIfExists('doctors');
     }
 };

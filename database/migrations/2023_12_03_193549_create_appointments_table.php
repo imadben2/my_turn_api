@@ -11,16 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cliniques', function (Blueprint $table) {
+        Schema::create('appointments', function (Blueprint $table) {
             $table->id();
-            $table->string('specialty');
-            $table->string('image');
 
-            $table->unsignedBigInteger('medecins_id'); // Foreign key column.
-            $table->foreign('medecins_id')
+            $table->unsignedBigInteger('user_id'); // Foreign key column.
+            $table->foreign('user_id')
                 ->references('id')
-                ->on('medecins')
+                ->on('users')
                 ->onDelete('cascade'); // Optional: cascade on delete.
+
+
+            $table->unsignedBigInteger('doctors_id'); // Foreign key column.
+            $table->foreign('doctors_id')
+                ->references('id')
+                ->on('doctors')
+                ->onDelete('cascade'); // Optional: cascade on delete.
+
 
             $table->timestamps();
         });
@@ -31,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cliniques');
+        Schema::dropIfExists('appointments');
     }
 };

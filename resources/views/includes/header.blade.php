@@ -6,20 +6,20 @@
                 <!-- Logo light -->
                 <a href="{{route('home')}}" class="logo-light">
                                 <span class="logo-lg">
-                                    <img src="{{ asset('assets/images/logo.png')}}" alt="logo">
+                                    <img src="{{ asset('backend/assets/images/logo.png')}}" alt="logo">
                                 </span>
                     <span class="logo-sm">
-                                    <img src="{{ asset('assets/images/logo-sm.png')}}" alt="small logo">
+                                    <img src="{{ asset('backend/assets/images/logo-sm.png')}}" alt="small logo">
                                 </span>
                 </a>
 
                 <!-- Logo Dark -->
                 <a href="{{route('home')}}" class="logo-dark">
                                 <span class="logo-lg">
-                                    <img src="{{ asset('assets/images/logo-dark.png')}}" alt="dark logo">
+                                    <img src="{{ asset('backend/assets/images/logo-dark.png')}}" alt="dark logo">
                                 </span>
                     <span class="logo-sm">
-                                    <img src="{{ asset('assets/images/logo-dark-sm.png')}}" alt="small logo">
+                                    <img src="{{ asset('backend/assets/images/logo-dark-sm.png')}}" alt="small logo">
                                 </span>
                 </a>
             </div>
@@ -110,7 +110,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="notify-icon">
-                                            <img src="{{ asset('assets/images/users/avatar-2.jpg') }}" class="img-fluid rounded-circle" alt="" />
+                                            <img src="{{ asset('backend/assets/images/users/avatar-2.jpg') }}" class="img-fluid rounded-circle" alt="" />
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 text-truncate ms-2">
@@ -148,7 +148,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="notify-icon">
-                                            <img src="{{ asset('assets/images/users/avatar-4.jpg') }}" class="img-fluid rounded-circle" alt="" />
+                                            <img src="{{ asset('backend/assets/images/users/avatar-4.jpg') }}" class="img-fluid rounded-circle" alt="" />
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 text-truncate ms-2">
@@ -190,7 +190,7 @@
             <li class="dropdown">
                 <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <span class="account-user-avatar">
-                                    <img src="{{ asset('assets/images/users/avatar-1.jpg') }}" alt="user-image" width="32" class="rounded-circle">
+                                    <img src="{{ asset('backend/assets/images/users/avatar-1.jpg') }}" alt="user-image" width="32" class="rounded-circle">
                                 </span>
                     <span class="d-lg-flex flex-column gap-1 d-none">
                                     <h5 class="my-0">{{Auth::user()->name}}</h5>

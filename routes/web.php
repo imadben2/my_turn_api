@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DoctorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,8 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+    Route::resource('doctors', \App\Http\Controllers\DoctorController::class);
 
+    Route::get('/getCommune/{id}',[DoctorController::class, 'getCommune'])->name('getCommune');
 });
 
